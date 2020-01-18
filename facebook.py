@@ -48,8 +48,6 @@ for row in rawJsonLocation["location_history"]:
 	GeoJSONLocation["features"].append(locationPoint)
 	if index>0 and index<len(GeoJSONLocation["features"]):
 		diff=GeoJSONLocation["features"][index-1]["properties"]["timestamp"]-GeoJSONLocation["features"][index]["properties"]["timestamp"]
-		# print(GeoJSONLocation["features"][index-1]["properties"]["timestamp"])
-		# print(GeoJSONLocation["features"][index]["properties"]["timestamp"])
 		frequency.append(diff)
 
 	index=index+1
