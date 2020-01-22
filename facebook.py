@@ -40,7 +40,9 @@ for row in rawJsonLocation["location_history"]:
 	  "type": "Feature",
 	  "properties": {
     	"name": row['name'],
-    	"timestamp": row['creation_timestamp']
+    	"timestamp": row['creation_timestamp'],
+    	"timeslot": datetime.utcfromtimestamp(row['creation_timestamp']).strftime('%H'),
+    	"year": datetime.utcfromtimestamp(row['creation_timestamp']).strftime('%Y')
 	  },
 	  "geometry": {
 	    "type": "Point",
