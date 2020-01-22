@@ -24,3 +24,10 @@ security_and_login_information/
 stories/
 your_places/
 
+*.cpg
+*.dbf
+*.prj
+*.qpj
+*.shp
+*.shx
+qgis/
